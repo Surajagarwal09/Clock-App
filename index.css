@@ -8,7 +8,7 @@
 body {
     background-color: rgba(29, 29, 29, 255);  
     /* font-family: "Archivo Black", sans-serif; */
-    font-family: "Bebas Neue", sans-serif;
+    /* font-family: "Bebas Neue", sans-serif; */
 }
 nav {
     display: flex;
@@ -29,12 +29,12 @@ nav ol {
     gap: 3vw;
 }
 .clock {
-    font-family: "Bebas Neue", sans-serif;
+
     border: none;
     border-radius: 10px;
     background-color: rgba(54, 54, 54, 255);
     color: whitesmoke;
-    padding: 1.3vh;
+    padding: 0.9vh;
     font-size:18px ;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -49,6 +49,7 @@ nav ol li button:hover{
     background-color: rgba(99, 97, 97, 0.553);
 }
 p{
+    font-family: "Bebas Neue", sans-serif;
     text-align: center;
     color: aliceblue;
 }
