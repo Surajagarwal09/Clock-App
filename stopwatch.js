@@ -7,11 +7,11 @@ let elapsed = 0;
 
 function updateTimer() {
     const now = Date.now();
-    const elapsed = now - starttime;
-    const millisec = Math.floor(elapsed % 1000).toString().padStart(3,'0');
-    const seconds = Math.floor((elapsed / 1000)%60).toString().padStart(2,'0');
-    const min = Math.floor((elapsed / (1000*60))%60).toString().padStart(2,'0');
-    const hrs = Math.floor((elapsed / (1000 * 60 * 60)) % 24).toString().padStart(2,'0');
+    const elapsedTime = now - starttime + elapsed;
+    const millisec = Math.floor(elapsedTime % 1000).toString().padStart(3, '0');
+    const seconds = Math.floor((elapsedTime / 1000) % 60).toString().padStart(2, '0');
+    const min = Math.floor((elapsedTime / (1000 * 60)) % 60).toString().padStart(2, '0');
+    const hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 24).toString().padStart(2, '0');
     timer.textContent = `${hrs}:${min}:${seconds}:${millisec}`;
 }
 
@@ -20,10 +20,9 @@ startstop.addEventListener('click', () => {
         starttime = Date.now();
         timerid = setInterval(updateTimer, 10);
         startstop.textContent = 'Stop';
-        console.log(timerid);
-    }
-    else {
+    } else {
         clearInterval(timerid);
+        elapsed += Date.now() - starttime;
         timerid = null;
         startstop.textContent = 'Start';
     }
@@ -35,4 +34,4 @@ reset.addEventListener('click', () => {
     elapsed = 0;
     timer.textContent = '00:00:00:000';
     startstop.textContent = 'Start';
-})
+});
