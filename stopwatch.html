@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Clock</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="stopwatch.css">
 </head>
 <body>
     <nav>
         <ol class="navlist">
             <li><a href="index.html"><button class="clock">World Clock</button></a></li>
             <li><a href="alarms.html"><button class="clock">Alarms</button></a></li>
-            <li><a href="stopwatch.html"><button id="World" class="clock">StopWatch</button></a></li>
+            <li><a href="stopwatch.html"><button id="World" class="clock">Stopwatch</button></a></li>
             <li><a href="timers.html"><button class="clock">Timers</button></a></li>
         </ol>
-    </nav>
-    <script src="index.js"></script>
+    </nav><br>
+    <div class="stopwatch">
+        <p id="timer">00:00:00:000</p><br>
+        <button id="reset"> Reset </button>
+        <button id="startstop">Start</button>
+    </div>
+    <script src="stopwatch.js"></script>
 </body>
 </html>

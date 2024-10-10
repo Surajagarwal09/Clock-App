@@ -47,20 +47,35 @@ nav ol li button:hover{
 #World{
     background-color: rgba(99, 97, 97, 0.553);
 }
-p{
+.stopwatch{
     font-family: "Bebas Neue", sans-serif;
     text-align: center;
     color: aliceblue;
+    align-items: center;
+    justify-content: center;
+
 }
-#date{
+#timer{
     margin-top: 30vh;
-    font-size: 25px;
-}
-#time{
     font-size: 100px;
 }
-#timezone{
-    font-size: 22px;
+#reset,#startstop{
+    margin-right: 30px;
+    width: 150px;
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: rgba(54, 54, 54, 255) ;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+#startstop{
+    background-color: rgb(37, 169, 37);
+}
+#reset:active,#startstop:active{
+  transform: scale(0.96);
 }
 @media screen and (max-width: 431px) {
     nav{
@@ -73,12 +88,16 @@ p{
         padding:1.1vh;
         font-size: 14px;
     }
-    #date{
-        font-size: 22px;
-    }
-    #time{
+    #timer{
         font-size: 70px;
     }
+    #reset,#startstop{
+        margin-right: 9px;
+        width: 130px;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+
 }
 
 @media screen and (max-width: 344px) {
@@ -93,5 +112,15 @@ p{
     .clock{
         padding:1vh;
         font-size: 13px;
+    }
+    #timer{
+        margin-top: 40vh;
+        font-size: 70px;
+    }
+    #reset,#startstop{
+        margin-right: 9px;
+        width: 120px;
+        border-radius: 10px;
+        font-size: 22px;
     }
 }

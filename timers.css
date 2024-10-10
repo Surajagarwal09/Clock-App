@@ -48,19 +48,11 @@ nav ol li button:hover{
     background-color: rgba(99, 97, 97, 0.553);
 }
 p{
+    margin-top: 40vh;
     font-family: "Bebas Neue", sans-serif;
     text-align: center;
     color: aliceblue;
-}
-#date{
-    margin-top: 30vh;
-    font-size: 25px;
-}
-#time{
     font-size: 100px;
-}
-#timezone{
-    font-size: 22px;
 }
 @media screen and (max-width: 431px) {
     nav{
@@ -73,11 +65,8 @@ p{
         padding:1.1vh;
         font-size: 14px;
     }
-    #date{
-        font-size: 22px;
-    }
-    #time{
-        font-size: 70px;
+    p{
+        font-size: 40px;
     }
 }
 
